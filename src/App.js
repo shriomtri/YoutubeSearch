@@ -50,7 +50,9 @@ class App extends Component {
 
                 <div className="row container">
                     <VideoDetail video={this.state.selectedVideo} />
-                    <VideoList list={this.state.videos}/>
+                    <VideoList
+                        list={this.state.videos}
+                        onVideoSelected={(video)=>{console.log(video)}}/>
                 </div>
 
             </div>
