@@ -16,7 +16,7 @@ const VideoList = (props) => {
     });
 
     return (
-        <div className="col-md-5 ">
+        <div className="col-md-4 current-container ">
             {videoItems}
         </div>
     );

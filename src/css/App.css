@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
   margin: 25px;
 }
+
+.output-box{
+  margin-top: 20px;
+}
+
 

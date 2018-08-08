@@ -19,23 +19,17 @@ class App extends Component {
         };
 
         this.fetch = debounce(500, this.fetch);
-
         this.fetch("national defence academy")
 
     }
 
     fetch(value){
-
         YTSearch({key:API_KEY, term: value},(data)=>{
-            console.log(data);
-
             this.setState({
                 videos: data,
                 selectedVideo: data[0]
             })
-
         })
-
     }
 
     userInput(event){
@@ -48,11 +42,11 @@ class App extends Component {
 
                 <Search onChange={this.userInput.bind(this)}/>
 
-                <div className="row container">
+                <div className="row container output-box">
                     <VideoDetail video={this.state.selectedVideo} />
                     <VideoList
                         list={this.state.videos}
-                        onVideoSelected={(video)=>{console.log(video)}}/>
+                        onVideoSelected={(video)=>{this.setState({selectedVideo:video})}}/>
                 </div>
 
             </div>
